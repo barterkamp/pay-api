@@ -1,0 +1,8 @@
+/node_modules
+.idea
+.DS_Store
+*.sketch
+/public/styles.css
+/public/script.js
+*.xd
+*.fig
