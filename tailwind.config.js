@@ -3,9 +3,10 @@ module.exports = {
     content: ['./src/**/*.{html,js}', '*.html'],
     theme: {
         fontFamily: {
-            dmSerif: "'DMSerifDisplay', serif",
-            publicSans: "'PublicSans', sans-serif",
-            robotoMono: "'RobotoMono', monospace",
+            dmSerif: ['DMSerifDisplay-Regular', 'serif'],
+            publicSans: ['PublicSans', 'sans-serif'],
+            // publicSans: ['PublicSans', 'sans-serif'],
+            robotoMono: ['RobotoMono', 'monospace'],
         },
         fontSize: {
             base: ['15px', { lineHeight: '28px' }],
@@ -18,6 +19,7 @@ module.exports = {
         },
         extend: {
             colors: {
+                veryLightBlue: '#EDF3F8',
                 darkPink: '#ba4270',
                 waterWhite: '#fbfcfe',
                 sanJuanBlue: '#36536b',
