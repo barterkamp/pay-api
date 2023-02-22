@@ -27,6 +27,9 @@ module.exports = {
                 mirageBlue: '#1b262f',
                 charmPink: '#da6d97',
             },
+            boxShadow: {
+                custom: '10px 10px 25px -10px rgba(54, 83, 107, 0.25)',
+            },
         },
     },
     corePlugins: {
