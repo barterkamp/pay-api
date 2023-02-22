@@ -5,40 +5,71 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/png" sizes="32x32" href="public/assets/favicon-32x32.png" />
         <link rel="stylesheet" href="public/styles.css" />
+
+        <style>
+            [x-cloak] {
+                display: none;
+            }
+        </style>
+
         <title>PayAPI Website Challenge</title>
     </head>
-    <body>
+    <body x-data>
         <div id="page-wrapper" class="bg-veryLightBlue">
-            <header class="mb-8 px-6 pt-10">
-                <a href="index.html">
-                    <img src="public/assets/svg/logo.svg" alt="PayApi - Home" />
-                </a>
-
+            <header
+                x-cloak
+                x-data="$store.globals"
+                class="mb-8 px-6 pt-10 sm:mb-12 sm:flex sm:items-center md:gap-16 md:px-10 lg:px-40">
+                <div class="flex justify-between">
+                    <a href="index.html">
+                        <img src="public/assets/svg/logo.svg" alt="PayApi - Home" />
+                    </a>
+                    <!--hamburger button-->
+                    <button x-cloak @click="toggle()" class="sm:hidden">
+                        <svg
+                            x-show="!open"
+                            width="28"
+                            height="17"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <use href="public/assets/svg/menu.svg#menu"></use>
+                        </svg>
+                    </button>
+                </div>
                 <!-- navigation -->
-
-                <nav class="fixed top-0 right-0 min-h-full w-80 bg-mirageBlue px-6">
-                    <!--hamburger-->
-                    <!--                    <svg width="28" height="17" xmlns="http://www.w3.org/2000/svg">-->
-                    <!--                        <use href="public/assets/svg/menu.svg#menu"></use>-->
-                    <!--                    </svg>-->
-
-                    <!-- close button -->
-                    <div class="mt-12">
-                        <svg width="22" height="23" xmlns="http://www.w3.org/2000/svg">
+                <nav
+                    x-cloak
+                    class="fixed top-0 right-0 flex min-h-full w-80 flex-col bg-mirageBlue px-6 pt-12 transition-all duration-200 ease-in sm:relative sm:w-auto sm:flex-grow sm:translate-x-0 sm:flex-row sm:items-center sm:bg-transparent sm:px-0 sm:pt-0 sm:opacity-100"
+                    :class="[open ? 'translate-x-0 opacity-100 ' : 'opacity-0 translate-x-full']">
+                    <!-- close menu button -->
+                    <button x-cloak @click="toggle()" class="self-end sm:hidden">
+                        <svg
+                            x-show="open"
+                            width="22"
+                            height="23"
+                            xmlns="http://www.w3.org/2000/svg">
                             <use href="public/assets/svg/close.svg#close"></use>
                         </svg>
-                    </div>
-
-                    <!-- navigation list -->
+                    </button>
+                    <hr class="mt-6 mb-11 opacity-20" />
+                    <!--navigation list-->
                     <ul
-                        class="mb-8 flex flex-col items-center gap-6 font-publicSans text-s font-bold text-waterWhite">
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        class="mb-8 flex flex-col items-center gap-6 font-publicSans sm:mb-0 sm:flex-row">
+                        <li
+                            class="text-s font-bold text-waterWhite text-opacity-70 sm:text-base sm:text-sanJuanBlue sm:opacity-70 sm:hover:opacity-100 sm:hover:duration-200">
+                            <a href="pricing.html">Pricing</a>
+                        </li>
+                        <li
+                            class="text-s font-bold text-waterWhite text-opacity-70 sm:text-base sm:text-sanJuanBlue sm:opacity-70 sm:hover:opacity-100 sm:hover:duration-200">
+                            <a href="about.html">About</a>
+                        </li>
+                        <li
+                            class="text-s font-bold text-waterWhite text-opacity-70 sm:text-base sm:text-sanJuanBlue sm:opacity-70 sm:hover:opacity-100 sm:hover:duration-200">
+                            <a href="contact.html">Contact</a>
+                        </li>
                     </ul>
-
+                    <!--navigation CTA button-->
                     <button
-                        class="w-full rounded-full bg-darkPink py-4 text-center font-publicSans text-base font-bold text-white">
+                        class="w-full rounded-full bg-darkPink py-4 text-center font-publicSans text-base font-bold text-white shadow-lg hover:bg-charmPink hover:duration-300 sm:ml-auto sm:w-auto sm:py-3 sm:px-8">
                         Schedule a Demo
                     </button>
                 </nav>
