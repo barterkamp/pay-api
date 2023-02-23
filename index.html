@@ -19,7 +19,7 @@
             <header
                 x-cloak
                 x-data="$store.globals"
-                class="mb-8 px-6 pt-10 md:container md:m-auto md:mb-12 md:flex md:items-center md:gap-16 lg:px-0">
+                class="mb-8 px-6 pt-10 md:container md:m-auto md:mb-12 md:flex md:items-center md:gap-16 md:px-10 lg:px-0">
                 <div class="flex justify-between">
                     <a href="index.html">
                         <img src="public/assets/svg/logo.svg" alt="PayApi - Home" />
@@ -112,63 +112,83 @@
                 </div>
             </section>
             <main>
-                <section class="bg-mirageBlue">
-                    <div>
-                        <a href="https://www.tesla.com">
-                            <svg width="131" height="17" xmlns="http://www.w3.org/2000/svg">
-                                <use href="public/assets/svg/tesla.svg#tesla"></use>
-                            </svg>
-                            <span class="sr-only">Tesla</span>
-                        </a>
+                <!-- Who we work with section-->
+                <section class="bg-mirageBlue py-20 px-12 md:py-[88px]">
+                    <div class="container m-auto lg:grid lg:grid-cols-12">
+                        <div
+                            class="mb-14 grid grid-cols-2 gap-x-12 gap-y-8 md:grid-cols-3 md:px-28 lg:col-start-8 lg:col-end-13 lg:row-start-1 lg:mb-0 lg:content-center lg:px-0">
+                            <a href="https://www.tesla.com">
+                                <svg
+                                    class="h-4 w-full fill-waterWhite"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <use href="public/assets/svg/tesla.svg#tesla"></use>
+                                </svg>
+                                <span class="sr-only">Tesla</span>
+                            </a>
 
-                        <a href="https://www.microsoft.com">
-                            <svg
-                                class="h-10 md:w-5 lg:w-[34px]"
-                                viewBox="0 0 148 31"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <use href="public/assets/svg/microsoft.svg#microsoft"></use>
-                            </svg>
-                            <span class="sr-only">Microsoft</span>
-                        </a>
+                            <a href="https://www.microsoft.com">
+                                <svg
+                                    class="h-6 w-full fill-waterWhite"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <use href="public/assets/svg/microsoft.svg#microsoft"></use>
+                                </svg>
+                                <span class="sr-only">Microsoft</span>
+                            </a>
 
-                        <a href="https://www.hp.com">
-                            <svg width="148" height="31" xmlns="http://www.w3.org/2000/svg">
-                                <use href="public/assets/svg/hewlett-packard.svg#hewlett"></use>
-                            </svg>
-                            <span class="sr-only">Hewlett Packard</span>
-                        </a>
+                            <a href="https://www.hp.com">
+                                <svg
+                                    class="h-6 w-full fill-waterWhite"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <use href="public/assets/svg/hewlett-packard.svg#hewlett"></use>
+                                </svg>
+                                <span class="sr-only">Hewlett Packard</span>
+                            </a>
 
-                        <a href="https://www.oracle.com">
-                            <svg width="148" height="31" xmlns="http://www.w3.org/2000/svg">
-                                <use href="public/assets/svg/oracle.svg#oracle"></use>
-                            </svg>
-                            <span class="sr-only">Oracle</span>
-                        </a>
+                            <a href="https://www.oracle.com">
+                                <svg
+                                    class="h-4 w-full fill-waterWhite"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <use href="public/assets/svg/oracle.svg#oracle"></use>
+                                </svg>
+                                <span class="sr-only">Oracle</span>
+                            </a>
 
-                        <a href="https://www.google.com/">
-                            <svg width="148" height="31" xmlns="http://www.w3.org/2000/svg">
-                                <use href="public/assets/svg/google.svg#google"></use>
-                            </svg>
-                            <span class="sr-only">Google</span>
-                        </a>
+                            <a href="https://www.google.com/">
+                                <svg
+                                    class="h-6 w-full fill-waterWhite"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <use href="public/assets/svg/google.svg#google"></use>
+                                </svg>
+                                <span class="sr-only">Google</span>
+                            </a>
 
-                        <a href="https://www.nvidia.com">
-                            <svg width="148" height="31" xmlns="http://www.w3.org/2000/svg">
-                                <use href="public/assets/svg/nvidia.svg#nvidia"></use>
-                            </svg>
-                            <span class="sr-only">Nvidia</span>
-                        </a>
+                            <a href="https://www.nvidia.com">
+                                <svg
+                                    class="h-6 w-full fill-waterWhite"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <use href="public/assets/svg/nvidia.svg#nvidia"></use>
+                                </svg>
+                                <span class="sr-only">Nvidia</span>
+                            </a>
+                        </div>
+
+                        <article
+                            class="text-center md:px-28 lg:col-start-1 lg:col-end-6 lg:px-0 lg:text-left">
+                            <h2 class="mb-4 font-dmSerif text-l text-waterWhite md:mb-6 md:text-xl">
+                                Who we work with
+                            </h2>
+                            <p class="mb-8 text-base text-waterWhite text-opacity-70">
+                                Today, millions of people around the world have successfully
+                                connected their accounts to apps they love using our API. We provide
+                                developers with the tools they need to create easy and accessible
+                                experiences for their users.
+                            </p>
+                            <button
+                                class="rounded-full border-2 border-waterWhite px-8 py-3 text-base font-bold text-waterWhite hover:bg-waterWhite hover:text-mirageBlue hover:duration-300">
+                                About Us
+                            </button>
+                        </article>
                     </div>
-                    <article>
-                        <h2>Who we work with</h2>
-                        <p>
-                            Today, millions of people around the world have successfully connected
-                            their accounts to apps they love using our API. We provide developers
-                            with the tools they need to create easy and accessible experiences for
-                            their users.
-                        </p>
-                        <button>About Us</button>
-                    </article>
                 </section>
                 <section>
                     <article>
